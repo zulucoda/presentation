@@ -6,4 +6,5 @@ node_modules/
 .sass-cache
 css/reveal.min.css
 js/reveal.min.js
-.idea
+web-guild/part-1/.idea
+web-guild/part-1/.idea/**
