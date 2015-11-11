@@ -1,0 +1,108 @@
+﻿/* css MFB style common */
+
+/* www.mfbproject.com */
+
+/* www.mfbproject.co.za */
+
+/* Copyright (c) 2010 Muzikayise Flynn Buthelezi */
+
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on Layout Gala  */ 
+
+html,body{margin:0;padding:0}
+
+body{font: 76% arial,sans-serif;color:#fff; text-align:center;background-color:#262626;font-size:8pt;}
+
+	h1,h2,h3,h4,h5,h6
+	{
+		margin:0;
+		padding:0;
+	}
+
+	p{margin:0;}
+	
+		p.pl{margin:0 0 8px 0;}
+		p.p2{margin:8px 0 0 0;}
+
+	a{text-decoration:none;color:#ebebeb;}
+
+	ul.horizonUl, ul.defUl
+	{
+		list-style-type:none;
+		margin:0;
+		padding:0;
+	}
+
+	ul.horizonUl li
+	{
+		display:inline;
+	}
+	
+	span{}
+	
+		span.visibilityHidden
+		{
+			visibility:hidden;
+		}
+		
+		span.spanUnder{text-decoration:underline;}
+	img{border:0;vertical-align:middle;}
+
+/* body End Here */
+
+/* Container Start Here */
+
+	div.container-01
+	{
+		background-color:#262626;
+	}
+
+/* Container End Here */
+
+/* Header Start Here */
+	
+	/* healthcare temp - 01 */
+	div.header-01
+	{
+		background: url('img/header.png') no-repeat top left #000;
+		color: #ebebeb;
+	}
+		div.header-01 h3
+		{
+			border:0px solid #fff;
+		}
+		
+/* Header End Here */
+
+/* Nav Start Here */
+
+	div.navigation-01
+	{
+		background: url('img/nav/nav.png') no-repeat top left;
+		color: #ebebeb;
+		font-size:7pt;
+		text-align:center;
+	}
+		
+
+/* Nav End Here */
+
+/* Content Start Here */
+
+/* Content End Here */
+
+/* Extra Start Here */
+
+
+/* Extra End Here */
+
+/* Footer Start Here */
+
+	div.footer-01
+	{
+		background: url('img/header.png') no-repeat top left #000;
+		color: #ebebeb;
+	}
+
+/* Footer End Here */
