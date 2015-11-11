@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>dariel web GUILD - Session 3: Getting Started With Angularjs</title>
+
+		<meta name="description" content="dariel web GUILD - Session 3: Getting Started With Angularjs">
+		<meta name="author" content="Muzikayise Flynn Buthelezi (zuluCoda)">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section>
+					<h1>dariel web GUILD - Session 3</h1>
+					<h3>Getting Started With Angularjs</h3>
+					<p>
+						<small>Created by <a href="http://mfbproject.co.za">Muzikayise Flynn Buthelezi</a> / <a href="https://twitter.com/theMFBproject">@theMFBProject</a></small>
+					</p>
+					<aside class="notes">
+						Welcome back everyone, thanks for joining us for our 3rd Web Guild session. Todays' session will be looking at getting started with Angularjs.
+					</aside>
+				</section>
+
+				<section>
+					<section id="stackAndTooling">
+						<h2>What is Angularjs</h2>
+						<section data-markdown>
+							<script type="text/template">
+								- Angularjsjs
+								- Jasmine
+								- Protractor - Angularjsjs functional testing framework
+								- Gruntjs
+								- SASS (responsive design)
+								- Node and NPM
+								- Webstorm - IDE
+								- Go CD, Bamboo - Build server
+								- Git - repository
+							</script>
+						</section>
+						<aside class="notes">
+							We use this stack and tooling on IB, and for any web related project that we take on this should be the stack that we use. Over coming guild sessions will be going deep into these areas. But first lets look at Modern Web Architecture
+						</aside>
+					</section>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section id="modernWebArchitecture">
+						<h2>Modern Web Architecture</h2>
+						<p>So before we look the modern web Architecture. I'd like go over the where we came from, by looking at the evolution of Web Development.</p>
+					</section>
+				</section>
+
+				<section>
+					<section id="webMasters">
+						<h2>Static Websites</h2>
+						<h3>HTML</h3>
+					<pre class="hljs">
+		+-----------------------------------+
+		|         CLIENT - WEB BROWSER      |
+		+---------------^-------------------+
+				| [HTML]
+		+---------------v-------------------+
+		|              HTML                 | [SERVER]
+		+-----------------------------------+
+					</pre>
+						<aside class="notes">
+							we were called web masters. when someone wanted to change something they give it to the web
+							master and the web master would change that html file.
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<h2>Dynamic Websites</h2>
+					<h3>The Spaghetti Revolution</h3>
+					<pre class="hljs">
+
+		+-----------------------------------+
+		|         CLIENT - WEB BROWSER      |
+		+---------------^-------------------+
+				| [HTML,FORM-POSTS,AJAX]
+		+---------------v-------------------+
+		| HTML, CSS, JavaScrip + ASP or PHP | [SERVER]
+		+-----------------------------------+
+					</pre>
+					<p>Mixing server side code ASP or PHP withing HTML (the spaghetti revolution), it wasnt pretty but it worked. And also some JavaScript libraries like JQuery and MooTools.
+						JQuery and PHP won these battles </p>
+					<aside class="notes">
+						This was a cool but crazy period...
+					</aside>
+				</section>
+
+				<section>
+					<section id="webFrameworks">
+						<h2>Web Frameworks</h2>
+						<h3>Convention Over Configuration</h3>
+										<pre class="hljs">
+		+-----------------------------------+
+		|         CLIENT - WEB BROWSER      |
+		+---------------^-------------------+
+				| [HTML,FORM-POSTS,AJAX]
+		+---------------v-------------------+
+		| Ruby on Rails (MVC), ASP.NET MVC  | [SERVER]
+		+-----------------------------------+
+										</pre>
+						<p>DHH (David Heinemeier Hansson) changed the game created Ruby on Rails which based on MVC pattern, it was a very popular framework. Others followed like ASP.NET MVC, Codeigniter PHP MVC</p>
+
+						<aside class="notes">
+							Convention over configuration is a software design paradigm which seeks to decrease the number of decisions that developers need to make, gaining simplicity, and not necessarily losing flexibility.
+
+							Before web frameworks It was chaos, people were using ASP.NET & PHP which ever way they wanted.
+
+							So with this we able to create Web Application which started rivaling Desktop applications.
+
+							Then mobile devices started become popular new problems arose, smaller screens, slower network speeds because 2g and 3g. Granted you could create responsive web applications we still had another needs. example wanting to have a native app for the mobile device but consuming the same data.
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section id="restfulApis">
+						<h2>RESTful APIs</h2>
+										<pre class="hljs">
+		+--------------------+    +--------------------+
+		|CLIENT WEB AngularjsJS| OR |CLIENT - MOBILE(APP)|
+		+----------^---------+    +----^---------------+
+			   | [JSON] 	       | [JSON]
+		+----------v-------------------v----+
+		|           RESTful API             | [SERVER]
+		+-----------------------------------+
+										</pre>
+						<section data-markdown>
+							<script type="text/template">
+								Now we have these JavaScript Front-End Frameworks (Angularjsjs, Emberjs) which are inspired by this mobile evolution. So whether your on Web or Mobile you want consume the same RESTful API, so more computation is being handled on the front-end and the communication back and forth is JSON. This is Modern Web Architecture that we use, some of the benefits are:
+								- Scaling, Better UI, SPAs (Single Page Applications), Testing, More value for customer
+							</script>
+						</section>
+
+						<aside class="notes">
+							So whether your on Web or Mobile you want consume the same RESTful API. The benefits for this Modern Web Architecture are:
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<h2>Summary</h2>
+					<h3 class="">Together we will tame this beast that is web development</h3>
+					<p>
+						Web Development has been evolving at a very fast pace, there's new libraries, new techniques of how to do things and etc... This stuff can quickly become overwhelming when starting a new project, which front-end MVC framework do you go with  AngularjsJS OR EmberJS, what about ReactJS, all these things. So therefore through this Web Guild, will be sharing amongst each, what has worked, what has not worked, which stack and tooling to use and etc...
+					</p>
+
+				</section>
+
+
+
+				<section style="text-align: left;">
+					<h1>THE END</h1>
+					<h3>any questions</h3>
+
+					<h3>Next topic will be Feature Toggling in AngularjsJS with Redact</h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
