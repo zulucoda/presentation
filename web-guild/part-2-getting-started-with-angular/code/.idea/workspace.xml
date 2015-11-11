@@ -18,8 +18,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/views/error.ejs" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/views/index.ejs" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/code_node_modules.xml" afterPath="$PROJECT_DIR$/.idea/libraries/code_node_modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="code.iws" />
@@ -335,7 +333,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447280788221</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="adding old school front-end jquery">
+      <created>1447280825962</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1447280825962</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
