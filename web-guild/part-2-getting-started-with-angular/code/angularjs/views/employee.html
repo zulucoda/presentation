@@ -1,0 +1,18 @@
+<h3>Add Employee</h3>
+<form>
+    <section>
+        <input placeholder="name" ng-model="employee.name" />
+    </section>
+    <section>
+        <input placeholder="surname" ng-model="employee.surname" />
+    </section>
+    <button ng-click="save()">save</button>
+</form>
+<hr>
+
+<h3>Display Employees</h3>
+<ul>
+    <li ng-repeat="employee in employeeList">
+        {{employee.name}} - {{employee.surname}}
+    </li>
+</ul>
