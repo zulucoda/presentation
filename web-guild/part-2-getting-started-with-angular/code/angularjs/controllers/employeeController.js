@@ -13,7 +13,24 @@
 
     app.controller('EmployeeController', function ($scope, EmployeeService) {
 
-        $scope.employee = {};
+        $scope.genderList = [
+            {
+                name: 'female',
+                description: 'female'
+            },
+            {
+                name: 'male',
+                description: 'male'
+            },
+            {
+                name: 'unsure',
+                description: 'unsure'
+            }
+        ];
+
+        $scope.employee = {
+            gender : 'unsure'
+        };
 
         function getEmployeeList() {
             EmployeeService.get().then(function (data) {

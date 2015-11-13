@@ -27,9 +27,13 @@ var acmeAjax = {
 
         var name = document.getElementById("name").value;
         var surname = document.getElementById("surname").value;
+        var hasDriversLicense = $('#hasDriversLicense').val();
+        var gender = $('#gender').val();
 
         employee.name = name;
         employee.surname = surname;
+        employee.hasDriversLicense = hasDriversLicense ? 'yes' : 'no';
+        employee.gender = gender;
         employee.created_at = new Date();
         employee.updated_at = new Date();
 
@@ -64,9 +68,8 @@ var acmeAjax = {
 
             for (var i = 0; i < employeesList.length; i++) {
                 var obj = employeesList[i];
-                $('#employees').append('<li>'+ obj.name +'-'+ obj.surname +'</li>');
+                $('#employees').append('<li>'+ obj.name +'-'+ obj.surname +'-'+ obj.hasDriversLicense +'-'+ obj.gender +'</li>');
             }
-
             overlay.display();
         });
     }

@@ -7,6 +7,8 @@ var Schema = mongoose.Schema;
 var employeeSchema = new Schema({
     name: { type: String, required: true },
     surname: { type: String, required: true },
+    hasDriversLicense: String,
+    gender: String,
     created_at: Date,
     updated_at: Date
 });

@@ -1,18 +1,29 @@
-<h3>Add Employee</h3>
-<form>
-    <section>
-        <input placeholder="name" ng-model="employee.name" />
-    </section>
-    <section>
-        <input placeholder="surname" ng-model="employee.surname" />
-    </section>
-    <button ng-click="save()">save</button>
-</form>
-<hr>
+<div class="content">
+    <h3>Add Employee</h3>
+    <form>
+        <section>
+            <input placeholder="name" ng-model="employee.name"/>
+        </section>
+        <section>
+            <input placeholder="surname" ng-model="employee.surname"/>
+        </section>
+        <section>
+            <label>Driver License?</label>
+            <input type="checkbox" ng-change="string" ng-true-value="Yes" ng-false-value="No" ng-model="employee.hasDriversLicense"/>
+        </section>
+        <section>
+            <label>Sex?</label>
+            <select ng-model="employee.gender"  ng-options="item.name as item.description for item in genderList">
+            </select>
+        </section>
+        <button ng-click="save()">save</button>
+    </form>
+    <hr>
 
-<h3>Display Employees</h3>
-<ul>
-    <li ng-repeat="employee in employeeList">
-        {{employee.name}} - {{employee.surname}}
-    </li>
-</ul>
+    <h3>Display Employees</h3>
+    <ul>
+        <li ng-repeat="employee in employeeList">
+            {{employee.name}} - {{employee.surname}} - {{(employee.hasDriversLicense) ? employee.hasDriversLicense : 'Noo'}} - {{(employee.gender) ? employee.gender : 'unsure' }}
+        </li>
+    </ul>
+</div>

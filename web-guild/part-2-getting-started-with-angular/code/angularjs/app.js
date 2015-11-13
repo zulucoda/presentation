@@ -1,7 +1,7 @@
 /**
  * Created by muzi on 2015/11/12.
  */
-(function (app) {
+(function () {
    'use strict';
 
     var app = angular.module('acme',
